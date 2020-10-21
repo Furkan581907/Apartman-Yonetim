@@ -1,0 +1,90 @@
+﻿@model WebApplication2.Models.Leas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Leas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Apartment_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Apartment_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Unit_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Unit_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinishDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinishDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rent)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rent)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Lease_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

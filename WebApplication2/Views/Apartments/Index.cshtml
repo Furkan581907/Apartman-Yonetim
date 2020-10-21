@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApplication2.Models.Apartment>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p>
+    @Html.ActionLink("Kata göre ücret artır", "Create")
+</p>
+<p>
+    @Html.ActionLink("Numaraya göre ücret artır.", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Apartment_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.City)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaveDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SaveUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EditDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EditUser)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apartment_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaveDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SaveUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EditDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EditUser)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Apartment_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Apartment_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Apartment_ID })
+        </td>
+    </tr>
+}
+
+</table>

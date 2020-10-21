@@ -1,0 +1,81 @@
+﻿@model IEnumerable<WebApplication2.Models.Leas>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Apartment_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Unit_ID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Active)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinishDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rent)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Apartment_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit_ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Active)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StartDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinishDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rent)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Lease_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Lease_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Lease_ID })
+        </td>
+    </tr>
+}
+
+</table>
